@@ -2,6 +2,11 @@
 
 using namespace std;
 
-class book{
-
+class Book{
+public:
+    string title;
+    string author;
+    string ISBN;
+    bool available;
+    
 };
