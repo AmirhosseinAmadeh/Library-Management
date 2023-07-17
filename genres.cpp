@@ -1,6 +1,6 @@
 #include <iostream>
 
-enum genres{
+enum Genres{
 Fiction,
 Non_Fiction,
 Poetry,
