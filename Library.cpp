@@ -64,19 +64,41 @@ public:
         }
     }
 
-    void searchByGenre(Genres genre)
+    void searchByGenre(Genres genre) // need Genres to work
     {
         bool found = false;
         for (const Book &book : booklist)
         {
-             if(book.genre == genre){
-            book.displayDetails();
-            found = true;
+            if (book.genre == genre)
+            {
+                book.displayDetails();
+                found = true;
             }
         }
         if (!found)
         {
             cout << "Book not found.\n";
+        }
+    }
+
+    void borrowingBooks(string isbn)
+    {
+        for (Book &book : booklist)
+        {
+            if (book.ISBN == isbn)
+            {
+                if (book.available)
+                {
+                    book.available = false;
+                    book.displayDetails();
+                    return;
+                }
+                else
+                {
+                    cout << "Book not available.\n";
+                    return;
+                }
+            }
         }
     }
 };
