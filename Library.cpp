@@ -15,13 +15,29 @@ public:
         booklist.push_back(b);
     }
 
-    void removeBook(Book b){
+    void removeBook(Book b)
+    {
         booklist.remove(b);
     }
 
-    void displayAllBooks() {
-        for (const Book& book : booklist) {
+    void displayAllBooks()
+    {
+        for (const Book &book : booklist)
+        {
             book.displayDetails();
+        }
+    }
+
+    void searchByTitle(string title) {
+        bool found = false;
+        for (const Book& book : booklist) {
+            if (book.title == title) {
+                book.displayDetails();
+                found = true;
+            }
+        }
+        if (!found) {
+            cout << "Book not found.\n";
         }
     }
 };
