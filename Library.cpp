@@ -12,6 +12,10 @@ private:
 public:
     void addBook(Book b)
     {
-        booklist.push_front(b);
+        booklist.push_back(b);
+    }
+
+    void removeBook(Book b){
+        booklist.remove(b);
     }
 };
