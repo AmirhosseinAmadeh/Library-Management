@@ -78,15 +78,15 @@ public:
         }
     }
 
-    void searchByGenre(string genre)
+    void searchByGenre(Genres genre)
     {
         bool found = false;
         for (const Book &book : booklist)
         {
-            // if(book.genre == genre){
+             if(book.genre == genre){
             book.displayDetails();
             found = true;
-            //}
+            }
         }
         if (!found)
         {
