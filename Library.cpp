@@ -1,7 +1,6 @@
 #include <iostream>
 #include "book.cpp"
 #include <list>
-#include <map>
 #include "genres.cpp"
 class library
 {
@@ -100,8 +99,9 @@ public:
                 }
             }
         }
-        cout << "Book not faund.\n";
+        cout << "Book with ISBN " << isbn << " not found.\n";
     }
+
     void returnTheBooks(string isbn)
     {
         for (Book &book : booklist)
@@ -121,6 +121,6 @@ public:
                 }
             }
         }
-        cout << "Book not faund.\n";
+        cout << "Book with ISBN " << isbn << " not found.\n";
     }
 };
