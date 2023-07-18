@@ -18,4 +18,10 @@ public:
     void removeBook(Book b){
         booklist.remove(b);
     }
+
+    void displayAllBooks() {
+        for (const Book& book : booklist) {
+            book.displayDetails();
+        }
+    }
 };
