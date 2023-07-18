@@ -100,5 +100,27 @@ public:
                 }
             }
         }
+        // cout << "Book not faund.\n
+    }
+    void returnTheBooks(string isbn)
+    {
+        for (Book &book : booklist)
+        {
+            if (book.ISBN == isbn)
+            {
+                if (!book.available)
+                {
+                    book.available = true;
+                    book.displayDetails();
+                    return;
+                }
+                else
+                {
+                    cout << "Book is already available.\n";
+                    return;
+                }
+            }
+        }
+        cout << "Book not faund.\n";
     }
 };
