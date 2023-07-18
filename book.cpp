@@ -4,7 +4,7 @@ using namespace std;
 
 class Book
 {
-private:
+public:
     string title;
     Genres genre;
     string author;
@@ -12,7 +12,6 @@ private:
     bool available;
     // Constructor
 
-public:
     Book(string t, string a, string isbn, Genres genre)
     {
         title = t;
