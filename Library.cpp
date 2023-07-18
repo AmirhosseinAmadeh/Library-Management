@@ -40,4 +40,17 @@ public:
             cout << "Book not found.\n";
         }
     }
+
+    void searchByAuthor(string author) {
+        bool found = false;
+        for (const Book& book: booklist){
+            if(book.author == author){
+                book.displayDetails();
+                found = true;
+            }
+        }
+        if(!found){
+            cout << "Book not found.\n";
+        }
+    }
 };
