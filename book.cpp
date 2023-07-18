@@ -1,5 +1,6 @@
 #include <iostream>
 #include "genres.cpp"
+#include "user.cpp"
 using namespace std;
 
 class Book
@@ -10,6 +11,7 @@ public:
     string author;
     string ISBN;
     bool available;
+    User user;
     // Constructor
 
     Book(string t, string a, string isbn, Genres genre)
