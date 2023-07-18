@@ -2,6 +2,7 @@
 #include "book.cpp"
 #include <list>
 #include "genres.cpp"
+using namespace std;
 class library
 {
 private:
