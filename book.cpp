@@ -22,7 +22,7 @@ public:
     }
 
      // Display book details
-    void displayDetails() {
+    void displayDetails() const{
         cout << "Title: " << title << endl;
         cout << "genre: " << genre << endl;
         cout << "Author: " << author << endl;
