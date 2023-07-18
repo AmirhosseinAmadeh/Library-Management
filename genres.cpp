@@ -6,9 +6,11 @@ Non_Fiction,
 Poetry,
 Drama,
 Horror,
+Fantasy,
 Thriller,
 Comedy,
 Adventure,
 YA,//Young Adult
-Childrens
+Childrens,
+Romance
 };
