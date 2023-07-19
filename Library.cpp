@@ -3,14 +3,16 @@
 #include <list>
 #include "genres.cpp"
 using namespace std;
-class library
+class Library
 {
 private:
     string libraryName;
     list<Book> booklist;
     User manager = User("library", 0, 0, 0);
 
-    library(string name) : libraryName(name) {}
+    Library(string name) {
+        libraryName = name;
+    }
 
 public:
     void addBook(Book b)
@@ -27,7 +29,8 @@ public:
     {
         for (const Book &book : booklist)
         {
-            book.displayDetails();
+            if (book.user.userName == "library")
+                book.displayDetails();
         }
     }
 
