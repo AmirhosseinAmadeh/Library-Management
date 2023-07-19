@@ -10,11 +10,12 @@ private:
     list<Book> booklist;
     User manager = User("library", 0, 0, 0);
 
-    Library(string name) {
+public:
+    Library(string name)
+    {
         libraryName = name;
     }
 
-public:
     void addBook(Book b)
     {
         booklist.push_back(b);
