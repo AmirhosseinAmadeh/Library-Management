@@ -30,6 +30,7 @@ public:
         cout << "Author: " << author << endl;
         cout << "ISBN: " << ISBN << endl;
         cout << "Availability: " << (available ? "Available" : "Not Available") << endl;
+        cout << "can find it by the " << user.userName << endl;
         cout << "------------------------" << endl;
     }
 };
