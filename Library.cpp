@@ -8,6 +8,7 @@ class library
 private:
     string libraryName;
     list<Book> booklist;
+    User manager = User("library", 0, 0, 0);
 
     library(string name) : libraryName(name) {}
 
@@ -113,6 +114,7 @@ public:
                 if (!book.available)
                 {
                     book.available = true;
+                    book.user = manager;
                     book.displayDetails();
                     return;
                 }
