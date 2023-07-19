@@ -81,7 +81,7 @@ public:
         }
     }
 
-    void borrowingBooks(string isbn)
+    void borrowingBooks(string isbn, User user)
     {
         for (Book &book : booklist)
         {
@@ -90,6 +90,7 @@ public:
                 if (book.available)
                 {
                     book.available = false;
+                    book.user = user;
                     book.displayDetails();
                     return;
                 }
