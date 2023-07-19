@@ -3,8 +3,8 @@ using namespace std;
 
 class User
 {
-public:
-    string userName;
+public://difalt user is library
+    string userName;// for library user name its book location
     string password; // National Id
     int age;
     int phoneNumber;
