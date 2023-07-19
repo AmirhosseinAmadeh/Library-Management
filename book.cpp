@@ -11,7 +11,7 @@ public:
     string author;
     string ISBN;
     bool available;
-    User user;
+    User user = User("library", 0, 0, 0);
     // Constructor
 
     Book(string t, string a, string isbn, Genres genre)
@@ -22,8 +22,9 @@ public:
         available = true; // New books are available by default
     }
 
-     // Display book details
-    void displayDetails() const{
+    // Display book details
+    void displayDetails() const
+    {
         cout << "Title: " << title << endl;
         cout << "genre: " << genre << endl;
         cout << "Author: " << author << endl;
