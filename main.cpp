@@ -1,6 +1,8 @@
 #include <iostream>
+#include <stdio.h>
 #include "book.cpp"
 #include "Library.cpp"
+#include "sqlite_modern_cpp-dev\hdr\sqlite_modern_cpp.h"
 using namespace std;
 int main() {
     Library library("center");
