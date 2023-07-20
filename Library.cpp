@@ -69,7 +69,7 @@ public:
         }
     }
 
-    void searchByGenre(Genres genre) // need Genres to work
+    void searchByGenre(string genre) // need Genres to work
     {
         bool found = false;
         for (const Book &book : booklist)

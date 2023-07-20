@@ -7,17 +7,18 @@ class Book
 {
 public:
     string title;
-    Genres genre;
+    string genre;
     string author;
     string ISBN;
     bool available;
     User user = User("library", 0, 0, 0);
     // Constructor
 
-    Book(string t, string a, string isbn, Genres genre)
+    Book(string t, string a, string isbn, string genre)
     {
         title = t;
         author = a;
+        genre = genre;
         ISBN = isbn;
         available = true; // New books are available by default
     }
