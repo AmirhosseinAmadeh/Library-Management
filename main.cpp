@@ -4,12 +4,13 @@
 #include "Library.cpp"
 #include "sqlite_modern_cpp-dev\hdr\sqlite_modern_cpp.h"
 using namespace std;
-int main() {
+int main()
+{
     Library library("center");
 
     // Sample books
-    Book book1("The C++ Programming Language", "Bjarne Stroustrup", "978-0201889543");
-    Book book2("Effective Modern C++", "Scott Meyers", "978-1491903995");
+    Book book1("The C++ Programming Language", "Bjarne Stroustrup", "Non_Fiction", "978-0201889543");
+    Book book2("Effective Modern C++", "Scott Meyers", "Fantasy", "978-1491903995");
 
     // Add books to the library
     library.addBook(book1);
@@ -29,7 +30,7 @@ int main() {
 
     // Update book availability
     cout << "Update book availability (ISBN: 978-0201889543)\n";
-    library.updateAvailability("978-0201889543", false);
+    library.borrowingBooks("978-0201889543", User("ali"));
 
     // Display all books after updating availability
     cout << "All Books in the Library:\n";
